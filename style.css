@@ -1,0 +1,140 @@
+/* Importing Google Fonts - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 1rem;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  width: 100%;
+  transition: all 0.3s ease-in;
+  font-size: 1;
+}
+.container h1 {
+  font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  gap: 10px;
+  align-items: self-start;
+  font-size: 2.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+body.light-theme {
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  color: #333;
+}
+
+body.dark-theme {
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  color: #eee;
+}
+
+.dark-theme .container {
+  background-color: rgba(25, 15, 15, 0.6);
+}
+
+#themeToggle {
+  display: flex;
+  justify-content: flex-end;
+  top: 20px;
+  right: 20px;
+  padding: 8px 8px;
+  border-radius: 50px;
+  background-color: #c48755;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  z-index: 1000;
+ 
+}
+
+
+body.dark-theme #lazyAdvice,
+body.dark-theme h1,
+body.dark-theme p {
+  color: #f0f0f0;
+}
+
+body.dark-theme .container {
+  background-color: rgba(20, 20, 20, 0.7);
+}
+
+body.dark-theme button {
+  background-color: #ffa07a;
+  color: #222;
+   transition: all 1s ease-in;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #ff6f61;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #e65b50;
+}
+
+#lazyAdvice {
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+  color: #333;
+}
+
+/* 📱 Responsive Styling */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  #lazyAdvice {
+    font-size: 1rem;
+  }
+}
+
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate {
+  animation: fadeZoom 0.6s ease forwards;
+}
