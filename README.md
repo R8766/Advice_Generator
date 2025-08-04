@@ -1,1 +1,1 @@
-# AI-image-generator
+# Advice generator
